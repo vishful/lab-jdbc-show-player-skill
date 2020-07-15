@@ -13,13 +13,13 @@ import model.Skill;
 public class SkillDAO {
 	static List<Skill> skillShare= new ArrayList<Skill>(); 
 	
-	final String SELECT_ALL_BLOGS = "Select * from SKILL1";
+	final String SELECT_ALL_SKILLS = "Select * from SKILL1";
 	
 	public List< Skill > listAllSkills() throws SQLException, Exception {
 
 		Skill skills = new Skill();
 		
-		PreparedStatement ps=ConnectionManager.getConnection().prepareStatement(SELECT_ALL_BLOGS);
+		PreparedStatement ps=ConnectionManager.getConnection().prepareStatement(SELECT_ALL_SKILLS);
 		
 		ResultSet rs = ps.executeQuery();
 		
